@@ -1,0 +1,54 @@
+{
+    "name": "carolpelu/blockly-automation",
+    "description": "Provides Laravel integration for the low-code BlocklyAutomation editor",
+    "keywords": [
+        "carolpelu",
+        "blockly-automation"
+    ],
+    "homepage": "https://github.com/tynael/laravel-blockly-automation",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Carol-Theodor Pelu",
+            "email": "carol@neutrondev.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CarolPelu\\BlocklyAutomation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CarolPelu\\BlocklyAutomation\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CarolPelu\\BlocklyAutomation\\BlocklyAutomationServiceProvider"
+            ],
+            "aliases": {
+                "BlocklyAutomation": "CarolPelu\\BlocklyAutomation\\BlocklyAutomationFacade"
+            }
+        }
+    }
+}
