@@ -12,19 +12,18 @@ class BlocklyAutomationServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerRoutes();
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'blockly-automation');
         $this->publishes([
-            __DIR__ . '/../resources/assets' => public_path('blockly-automation'),
+            __DIR__ . '/../../resources/assets' => public_path('blockly-automation'),
         ], 'assets');
         $this->publishes([
             __DIR__ . '/../config/config.php' => config_path('blockly-automation'),
         ], 'config');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'blockly-automation');
     }
 
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'blockly-automation');
     }
 
     protected function registerRoutes()
