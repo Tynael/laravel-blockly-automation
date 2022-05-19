@@ -8,7 +8,7 @@ use CarolPelu\BlocklyAutomation\Http\Controllers\Controller;
 
 class BlocklyAutomationController extends Controller
 {
-    public function __invokable()
+    public function __invoke()
     {
         return view('blockly-automation::index');
     }

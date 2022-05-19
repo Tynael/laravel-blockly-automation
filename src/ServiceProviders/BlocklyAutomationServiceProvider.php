@@ -16,6 +16,9 @@ class BlocklyAutomationServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/assets' => public_path('blockly-automation'),
         ], 'assets');
+        $this->publishes([
+            __DIR__ . '/../config/config.php' => config_path('blockly-automation'),
+        ], 'config');
     }
 
     public function register()
@@ -34,7 +37,7 @@ class BlocklyAutomationServiceProvider extends ServiceProvider
     protected function routeConfiguration()
     {
         return [
-            'middleware' => config('cnpcuivalidator.middleware'),
+            'middleware' => config('blockly-automation.middleware'),
         ];
     }
 }
