@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CarolPelu\\BlocklyAutomation\\": "src"
+            "CarolPelu\\BlocklyAutomation\\": "src/"
         }
     },
     "autoload-dev": {
@@ -44,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CarolPelu\\BlocklyAutomation\\BlocklyAutomationServiceProvider"
+                "CarolPelu\\BlocklyAutomation\\ServiceProviders\\BlocklyAutomationServiceProvider"
             ],
             "aliases": {
                 "BlocklyAutomation": "CarolPelu\\BlocklyAutomation\\BlocklyAutomationFacade"
