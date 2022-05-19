@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^6.4|^7.0|^8.0|^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -35,6 +35,7 @@
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
 
     },
